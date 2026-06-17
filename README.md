@@ -294,7 +294,18 @@ CAT/
 If you use CAT in your research, please cite:
 
 ```bibtex
-TBA
+@article{BEVILACQUA2026110817,
+title = {CAT: A Concept Annotation Tool for supporting the development of interpretable deep learning models},
+journal = {Biomedical Signal Processing and Control},
+volume = {125},
+pages = {110817},
+year = {2026},
+issn = {1746-8094},
+doi = {https://doi.org/10.1016/j.bspc.2026.110817},
+url = {https://www.sciencedirect.com/science/article/pii/S1746809426013716},
+author = {Vincenzo Bevilacqua and Antonio {Di Marino} and Angelo Ciaramella and Ivanoe {De Falco} and Giovanna Sannino},
+keywords = {Annotation, Labeling tool, Image datasets, Concept-based interpretability, Deep learning},
+}
 ```
 
 ---
