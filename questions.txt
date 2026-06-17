@@ -1,0 +1,12 @@
+Category 1||Configure the instruction to annotate this attribute here|Value_1|Value_2|Value_3|Value_4
+Category 2||Configure the instruction to annotate this attribute here|Value_5|Value_6|Value_7
+Category 3||Configure the instruction to annotate this attribute here|Value_3|Value_7
+Category 3||Configure the instruction to annotate this attribute here|Value_1|Value_8|Value_9|Value_10|Value_11|
+Category 3||Configure the instruction to annotate this attribute here|Value_12|Value_13|Value_14
+Category 4||Configure the instruction to annotate this attribute here|Value_15|Value_16|Value_17
+Category 4||Configure the instruction to annotate this attribute here|Value_18|Value_19|Value_20
+Category 5||Configure the instruction to annotate this attribute here|Value_21|Value_22
+Category 5||Configure the instruction to annotate this attribute here|Value_23|Value_24|Value_25
+Category 5||Configure the instruction to annotate this attribute here|Value_26|Value_27|Value_28|Value_29
+Category 6||Configure the instruction to annotate this attribute here|Value_21|Value_22
+Category 6||Configure the instruction to annotate this attribute here|Value_30|Value_31|Value_32|Value_33
