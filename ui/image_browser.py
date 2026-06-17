@@ -17,7 +17,7 @@ from core.csv_manager import (
     sync_csv_with_folder
 )
 from core.export_manager import export_to_json
-from utils.helpers import get_next_crop_index
+from utils.helpers import get_next_crop_index, resource_path
 from ui.statistics_window import StatisticsWindow
 from ui.collapsible_section import CollapsibleSection
 
@@ -141,7 +141,7 @@ class ImageBrowser(QMainWindow):
         # Barra ricerca
         self.search_bar = QLineEdit()
         self.search_bar.addAction(
-            QIcon('imgs/search.png'),
+            QIcon(resource_path('ui_icons/search.png')),
             QLineEdit.LeadingPosition
         )
         self.search_bar.setPlaceholderText("Search image...")
@@ -163,7 +163,7 @@ class ImageBrowser(QMainWindow):
         self.next_button = QPushButton("Next →")
         self.next_button.clicked.connect(self.next_image)
         self.jump_button = QPushButton("")
-        self.jump_button.setIcon(QIcon('imgs/right-arrow.png'))
+        self.jump_button.setIcon(QIcon(resource_path('ui_icons/right-arrow.png')))
         self.jump_button.setIconSize(QSize(24, 24))
         self.jump_button.setFixedSize(36, 36)
         self.jump_button.setToolTip("Jump to first unanswered image")
@@ -310,7 +310,7 @@ class ImageBrowser(QMainWindow):
         self.splitter.setSizes([200, 730, 300])
 
         main_layout.addWidget(self.splitter)
-        self.load_questions("questions.txt")
+        self.load_questions(resource_path("questions.txt"))
         self.set_ui_mode("none")
 
     # ------------------------------------------------------------------ #
@@ -476,9 +476,9 @@ class ImageBrowser(QMainWindow):
                 btn.setStyleSheet(self.button_style(normal=True))
                 return btn
 
-            eye_closed = make_icon_button("imgs/eye-closed.png", "Not Visible")
-            eye_half   = make_icon_button("imgs/eye-half.png",   "Partially Visible")
-            eye_open   = make_icon_button("imgs/eye-open.png",   "Fully Visible")
+            eye_closed = make_icon_button(resource_path("ui_icons/eye-closed.png"), "Not Visible")
+            eye_half   = make_icon_button(resource_path("ui_icons/eye-half.png"),   "Partially Visible")
+            eye_open   = make_icon_button(resource_path("ui_icons/eye-open.png"),   "Fully Visible")
 
             visibility_group.addButton(eye_closed)
             visibility_group.addButton(eye_half)
@@ -524,7 +524,7 @@ class ImageBrowser(QMainWindow):
                     btn = QPushButton()
                     btn.setCheckable(True)
                     btn.setToolTip(option)
-                    icon_path = os.path.join('imgs', option + '.png')
+                    icon_path = resource_path(os.path.join('imgs', option + '.png'))
                     btn.setIcon(QIcon(icon_path))
                     btn.setIconSize(QSize(64, 64))
                     btn.setFixedSize(75, 75)
@@ -1469,11 +1469,11 @@ class ImageBrowser(QMainWindow):
         if self.dark_theme:
             apply_stylesheet(app, theme='dark_teal.xml')
             self.theme_action.setText("Switch to Light Theme")
-            qss_file = "style_dark.qss"
+            qss_file = resource_path("style_dark.qss")
         else:
             apply_stylesheet(app, theme='light_teal_500.xml')
             self.theme_action.setText("Switch to Dark Theme")
-            qss_file = "style.qss"
+            qss_file = resource_path("style.qss")
 
         try:
             with open(qss_file, "r") as f:

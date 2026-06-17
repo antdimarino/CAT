@@ -234,8 +234,6 @@ class InteractiveImageLabel(QLabel):
 
             bbox = (x1, y1, x2, y2)
             self._current_bbox = bbox
-            # BUG FIX: era self._bboxes = [self._current_bbox] che
-            # sovrascriveva l'append fatto sopra perdendo la categoria
             self._bboxes = [bbox]
 
             self._bbox_rect = QRect()

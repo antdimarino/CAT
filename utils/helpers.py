@@ -1,5 +1,17 @@
 import os
 import re
+import sys
+
+def resource_path(relative_path: str) -> str:
+    """
+    Restituisce il percorso assoluto a una risorsa, funzionante sia
+    in modalità sviluppo che da eseguibile PyInstaller compilato.
+    """
+    try:
+        base_path = sys._MEIPASS
+    except AttributeError:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
 
 def get_next_crop_index(crop_dir: str, base_name: str) -> int:
